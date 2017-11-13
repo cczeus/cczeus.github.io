@@ -1,93 +1,93 @@
-/* ---- reset ---- */
 
 body {
     margin: 0;
-    font:normal 75% Arial, Helvetica, sans-serif;
-  }
-  
-  canvas {
-    display: block;
-    vertical-align: bottom;
-  }
+    color: white;
+    font-family: 'Abel', sans-serif;
+}
   
   /* ---- particles.js container ---- */
   
   #particles-js {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     background-color: #262626;
-    background-image: url("");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
   }
   
 .page {
-    height: 100%;
-    width: 100%;
-}
-
-.home {
-    display: table;
-    position: absolute;
-}
-
-.middle {
+    height: 100vh;
+    position: relative;
+    width: 100vw;
     display: table-cell;
     vertical-align: middle;
 }
 
-.inner {
+.home {
+    display: table;
+    position: relative;
+    vertical-align: middle;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    color: white;
-    font-family: 'Abel', sans-serif;
 }
 
-.inner h1 {
+.home h1 {
     font-size: 96pt;
     height: 140px;
+    margin-top: 15%;
+    margin-bottom: 0px;
 }
 
-.inner p {
+.home p {
     font-size: 24pt;
     margin: 0px;
 }
 
-.inner ul img {
+.home ul img {
     width: 42px;
     height: 42px;
     padding: 0px;
 }
 
-.inner ul {
+.home ul {
     list-style-type: none;
     padding: 0px;
     margin: 0px;
 }
 
-.inner img {
+.home img {
     width: 75px;
     height: 50px;
     padding: 100px 0px 0px 0px;
 }
 
-.inner li a {
+.home li a {
     display: inline;
     padding: 16px;
 }
 
-.inner li {
+.home li {
     float: left;
-}
-
-.inner h1 {
-    margin: 0px
 }
 
 .table {
     display: table;
     margin: 15px auto;
+}
+
+.about h3 {
+    font-size: 64px;
+    margin-top: 0px;
+}
+
+.about .content {
+    display: inline-block;
+    width: 100vw;
+    border: 10% 0%;
+    padding: 10%;
+    background-color: rgba(26, 26, 26, 0.8);
+}
+
+.about p {
+    font-size: 24px;
 }
