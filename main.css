@@ -24,7 +24,7 @@ body {
   }
   
 
-.outer {
+.home {
     display: table;
     position: absolute;
     height: 100%;
@@ -38,15 +38,47 @@ body {
 
 .inner {
     margin-left: auto;
-    margin-right: auto; 
-    width: 700px;
+    margin-right: auto;
     text-align: center;
     color: white;
     font-family: 'Abel', sans-serif;
-    font-size: 36pt;
+}
+
+.inner h1 {
+    font-size: 96pt;
+    height: 140px;
+}
+
+.inner p {
+    font-size: 24pt;
+    margin: 0px;
 }
 
 .inner img {
     width: 42px;
     height: 42px;
+}
+
+.inner ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.inner li a {
+    display: inline;
+    padding: 16px;
+}
+
+.inner li {
+    float: left;
+}
+
+.inner h1 {
+    margin: 0px
+}
+
+.table {
+    display: table;
+    margin: 15px auto;
 }
