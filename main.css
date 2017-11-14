@@ -18,12 +18,13 @@ body {
     height: 100vh;
     position: relative;
     width: 100vw;
-    display: table-cell;
+    display: inline-block;
     vertical-align: middle;
+    max-width: 100%;
 }
 
 .home {
-    display: table;
+    display: inline-block;
     position: relative;
     vertical-align: middle;
     margin-left: auto;
@@ -75,7 +76,7 @@ body {
     margin: 15px auto;
 }
 
-.about h3 {
+h3 {
     font-size: 64px;
     margin-top: 0px;
 }
