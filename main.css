@@ -1,42 +1,63 @@
-
 body {
     margin: 0;
     color: white;
     font-family: 'Abel', sans-serif;
+    background-color: grey;
 }
-  
-  /* ---- particles.js container ---- */
-  
-  #particles-js {
+
+h1 {
+    font-size: 14vmin;
+    height: 12vh;
+}
+
+h2 {
+    font-size: 10vmin;
+    margin-top: 0;
+    margin-bottom: 4vh;
+}
+
+h3 {
+    font-size: 5vmin;
+    margin: 0;
+}
+
+p {
+    font-size: 3vmin;
+}
+
+#particles-js {
     position: fixed;
+    z-index: -1;
     width: 100%;
     height: 100%;
     background-color: #262626;
-  }
-  
+}
+
 .page {
-    height: 100vh;
-    position: relative;
+    min-height: 100vh;
     width: 100vw;
-    display: inline-block;
+}
+
+.outer {
+    position: absolute;
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.inner {
+    display: table-cell;
     vertical-align: middle;
-    max-width: 100%;
+    margin: 0 auto;
 }
 
 .home {
-    display: inline-block;
-    position: relative;
-    vertical-align: middle;
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
 }
 
 .home h1 {
-    font-size: 96pt;
     height: 140px;
-    margin-top: 15%;
-    margin-bottom: 0px;
+    margin: auto;
 }
 
 .home p {
@@ -44,16 +65,23 @@ body {
     margin: 0px;
 }
 
-.home ul img {
-    width: 42px;
-    height: 42px;
-    padding: 0px;
+.home ul {
+    display: table;
+    list-style-type: none;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-top: 10px;
 }
 
-.home ul {
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
+.home ul img {
+    width: 5vmin;
+    height: 5vmin;
+    padding: 0.2vh;
+}
+
+.home li {
+    display: inline;
+    padding: 0.8vmin;
 }
 
 .home img {
@@ -62,33 +90,51 @@ body {
     padding: 100px 0px 0px 0px;
 }
 
-.home li a {
-    display: inline;
-    padding: 16px;
+.about {
+    text-align: left;
+    padding-right: 30%;
 }
 
-.home li {
-    float: left;
-}
-
-.table {
-    display: table;
-    margin: 15px auto;
-}
-
-h3 {
-    font-size: 64px;
-    margin-top: 0px;
-}
-
-.about .content {
-    display: inline-block;
-    width: 100vw;
-    border: 10% 0%;
-    padding: 10%;
+.content {
     background-color: rgba(26, 26, 26, 0.8);
+    padding: 6vw;
 }
 
-.about p {
-    font-size: 24px;
+.experience p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.experience ul p {
+    padding-left: 10px;
+}
+
+.projects {
+    text-align: center;
+    margin: 20% 0;
+}
+
+@media screen and (orientation: landscape) {
+    .project {
+        width: 40%;
+        padding: 0 5%;
+        display: inline-block;
+    }
+
+    .project img {
+        width: 100%;
+        float: left;
+    }
+
+    .project h3 {
+        margin-bottom: 5%;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .project {
+        min-width: 90%;
+        padding: 0 5%;
+        display: inline-block;
+    }
 }
