@@ -1,3 +1,103 @@
+
+function Utils() {}
+Utils.prototype = {
+    constructor: Utils,
+    isElementInView: function (element, fullyInView) {
+        var pageTop = $(window).scrollTop();
+        var pageBottom = pageTop + $(window).height();
+        var elementTop = $(element).offset().top;
+        var elementBottom = elementTop + $(element).height();
+    
+        if (fullyInView === true) {
+            return ((pageTop < elementTop) && (pageBottom > elementBottom));
+        } else {
+            return ((elementTop <= pageBottom) && (elementBottom >= pageTop + 1));
+        }
+    }
+};
+    
+var Util = new Utils();
+
+function getCurrentPage() {
+    var $page = $('#home');
+    if(Util.isElementInView($page, false)) {
+        return $page;
+    }
+    $page = $('#about');
+    if(Util.isElementInView($page, false)) {
+        return $page;
+    }
+    $page = $('#experience');
+    if(Util.isElementInView($page, false)) {
+        return $page;
+    }
+    $page = $('#projects');
+    if(Util.isElementInView($page, false)) {
+        return $page;
+    }
+    $page = $('#education');
+    if(Util.isElementInView($page, false)) {
+        return $page;
+    }
+    return null;
+}
+
+$('#home-button').click(function() {
+    $('html, body').animate({
+        scrollTop: $('#about').offset().top
+    }, 500);
+});
+
+$('#about-button').click(function() {
+    $('html, body').animate({
+        scrollTop: $('#experience').offset().top
+    }, 500);
+});
+
+$('#experience-button').click(function() {
+    $('html, body').animate({
+        scrollTop: $('#projects').offset().top
+    }, 500);
+});
+
+$('#projects-button').click(function() {
+    $('html, body').animate({
+        scrollTop: $('#education').offset().top
+    }, 500);
+});
+
+$(document).keydown(function(e){
+    switch(e.which) {
+    case 37: // left
+        var $current = getCurrentPage();
+        if($current.length) {
+            var $prev_embed = $current.prev('.page');
+            if($prev_embed.length) {
+                $('html, body').animate({
+                    scrollTop:$prev_embed.offset().top
+                }, 500);
+                return;
+            }
+        }
+        break;
+
+    case 39: // right
+        var $current = getCurrentPage();
+        if($current.length) {
+            var $next_embed = $current.next('.page');
+            if($next_embed.length) {
+                $('html, body').animate({
+                    scrollTop:$next_embed.offset().top
+                }, 500);
+                return;
+            }
+        }
+        break;
+    default: return; // exit this handler for other keys
+    }
+    e.preventDefault();
+});
+
 particlesJS('particles-js', {
     'particles': {
         'number': {

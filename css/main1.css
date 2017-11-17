@@ -124,6 +124,7 @@ p {
     .project img {
         width: 100%;
         float: left;
+        max-height: 30vw;
     }
 
     .project h3 {
