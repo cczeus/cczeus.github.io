@@ -23,10 +23,10 @@ function getCurrentPage() {
     if(Util.isElementInView($page, false)) {
         return $page;
     }
-    $page = $('#about');
-    if(Util.isElementInView($page, false)) {
-        return $page;
-    }
+    // $page = $('#about');
+    // if(Util.isElementInView($page, false)) {
+    //     return $page;
+    // }
     $page = $('#experience');
     if(Util.isElementInView($page, false)) {
         return $page;
