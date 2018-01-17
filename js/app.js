@@ -44,15 +44,15 @@ function getCurrentPage() {
 
 $('#home-button').click(function() {
     $('html, body').animate({
-        scrollTop: $('#about').offset().top
-    }, 500);
-});
-
-$('#about-button').click(function() {
-    $('html, body').animate({
         scrollTop: $('#experience').offset().top
     }, 500);
 });
+
+// $('#about-button').click(function() {
+//     $('html, body').animate({
+//         scrollTop: $('#experience').offset().top
+//     }, 500);
+// });
 
 $('#experience-button').click(function() {
     $('html, body').animate({
